@@ -27,7 +27,7 @@
         <?= $message; ?>
     </h1>
 
-    <!-- PHP arrays with associative array, condition -->
+    <!-- PHP arrays with associative array, condition, function -->
 
     <?php
     $languages = [
@@ -57,19 +57,29 @@
         ],
     ];
 
+    function filterByYear($langs, $year)
+    {
+        $filteredLangs = [];
+
+        foreach ($langs as $lang) {
+            if ($lang['year'] >= $year) {
+                $filteredLangs[] = $lang;
+            }
+        }
+
+        return $filteredLangs;
+    }
 
 
     ?>
     <h2>Languages and Founders</h2>
     <ul>
         <?php foreach ($languages as $lang) : ?>
-            <?php if ($lang['year'] > 1980) : ?> <!-- C will be ignored since it founded before 1980 -->
-                <li>
-                    <a href="<?= $lang['officialLink'] ?>">
-                        <?= $lang['name'] ?> - By <?= $lang['author']; ?>
-                    </a>
-                </li>
-            <?php endif ?>
+            <li>
+                <a href="<?= $lang['officialLink'] ?>">
+                    <?= $lang['name'] ?> - By <?= $lang['author']; ?>
+                </a>
+            </li>
         <?php endforeach ?>
     </ul>
 
@@ -77,7 +87,16 @@
         <?= "My first language is " . $languages[0]['name'] ?>
     </h2>
 
-    
+    <h2>Languages that founded after 1990</h2>
+    <ul>
+        <?php foreach (filterByYear($languages, 1990) as $lang) : ?>
+            <li>
+                <a href="<?= $lang['officialLink'] ?>">
+                    <?= $lang['name'] ?> - Founded in: <?= $lang['year'] ?>
+                </a>
+            </li>
+        <?php endforeach; ?>
+    </ul>
 
 
 </body>
