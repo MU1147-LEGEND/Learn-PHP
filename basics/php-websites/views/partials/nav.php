@@ -1,7 +1,7 @@
 <header class="absolute inset-x-0 top-0 z-50">
     <nav aria-label="Global" class="flex items-center justify-between p-6 lg:px-8">
         <div class="flex lg:flex-1">
-            <a href="#" class="-m-1.5 p-1.5">
+            <a href="/" class="-m-1.5 p-1.5">
                 <span class="sr-only">Your Company</span>
                 <img src="https://tailwindcss.com/plus-assets/img/logos/mark.svg?color=indigo&shade=500" alt="" class="h-8 w-auto" />
             </a>
@@ -15,9 +15,9 @@
             </button>
         </div>
         <div class="hidden lg:flex lg:gap-x-8">
-            <a href="/" class="<?php echo getUri('/') ? "bg-purple-400 " : "hover:bg-gray-400/20"; ?> text-sm/6 font-semibold text-white p-2 transition-all duration-300 rounded-md">Home </a>
-            <a href="/about.php" class="<?php echo getUri('/about.php') ? "bg-purple-400 " : "hover:bg-gray-400/20"; ?> text-sm/6 font-semibold text-white p-2 transition-all duration-300 rounded-md">About Us</a>
-            <a href="/contact.php" class="<?php echo getUri('/contact.php') ? "bg-purple-400 " : "hover:bg-gray-400/20"; ?> text-sm/6 font-semibold text-white p-2 transition-all duration-300 rounded-md">Contact Us</a>
+            <a href="/" class="<?php echo getUri('/') ? "bg-purple-400 text-white" : "hover:bg-gray-400/20 text-white/60"; ?> text-sm/6 font-semibold p-2 transition-all duration-300 rounded-md">Home </a>
+            <a href="/about" class="<?php echo getUri('/about') ? "bg-purple-400 text-white" : "hover:bg-gray-400/20 text-white/60"; ?> text-sm/6 font-semibold p-2 transition-all duration-300 rounded-md">About Us</a>
+            <a href="/contact" class="<?php echo getUri('/contact') ? "bg-purple-400 text-white" : "hover:bg-gray-400/20 text-white/60"; ?> text-sm/6 font-semibold p-2 transition-all duration-300 rounded-md">Contact Us</a>
         </div>
         <div class="hidden lg:flex lg:flex-1 lg:justify-end">
             <a href="#" class="text-sm/6 font-semibold text-white">Log in <span aria-hidden="true">&rarr;</span></a>

@@ -5,8 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="../../style.css">
     <title>Home</title>
 </head>
 
-<body>
-    <div class="bg-gray-900">
+<body class="bg-gray-900">
+    <div>
