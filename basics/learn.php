@@ -101,5 +101,17 @@ $lastText = "Lorem ipsum dolor sit amet";
 // print_r(explode(" ", $shortText));   //string to array convert - separator required
 // echo strtoupper(substr($shortText, 0,5)); // slice and uppercase Lorem -> LOREM
 // echo substr($lastText, -5, 3); // get three ch from the position -5;
+// echo "Here I'm using \"Escape Character\" !";
+
+////////////-------Number Methods------///////////////
+$num = 423;
+// var_dump(is_int($num));
+// var_dump(is_infinite($num));
+// var_dump(is_nan($num));
+// var_dump(is_numeric("4444")); // true
+// var_dump(is_numeric("444a4")); // false
+// $x = 23465.768;
+// echo intval($x); // get the integer value only.
+
 
 
