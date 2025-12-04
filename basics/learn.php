@@ -113,5 +113,34 @@ $num = 423;
 // $x = 23465.768;
 // echo intval($x); // get the integer value only.
 
+// ///// Math-------
+
+// echo (min([3, 4, 5, 6, -20]));
+// echo "\n\n";
+// echo (max([3, 4, 5, 6, -22]));
+// echo abs(-6.7); // provides positive value
+// echo rand(1,10); // random
+
+// CONSTANT // they cannot be changed or undefined and they're global-
+
+// define("byDefine", "constant value");  // can be created inside another block scope.
+// const byKeyword = "constant value";  // cannot be created inside another block scope
+// echo byDefine;
+
+// CONSTANT ARRAYS
+
+// define("constArr", ["PHP", "JS", "Python", "C", "JAVA"]);
+// print_r(constArr);
+
+
+// echo __line__ ; // magic constant
+
+// -----------------PHP Array Operators-----------------
+$cms = ["shopify"=>"Liquid", "wordpress"=>"PHP"];
+$customSite = ["Frontend"=>"React/Next", "Backend"=>"Node/Express"];
+
+// print_r($cms + $customSite); // Array Union will provide unexpected result on non-key arrays.
+// var_dump($cms == $customSite); // array compare, or ===, returns boolean
+// var_dump($cms != $customSite); // returns boolean
 
 
