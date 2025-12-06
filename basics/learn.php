@@ -136,11 +136,73 @@ $num = 423;
 // echo __line__ ; // magic constant
 
 // -----------------PHP Array Operators-----------------
-$cms = ["shopify"=>"Liquid", "wordpress"=>"PHP"];
-$customSite = ["Frontend"=>"React/Next", "Backend"=>"Node/Express"];
+$cms = ["shopify" => "Liquid", "wordpress" => "PHP"];
+$customSite = ["Frontend" => "React/Next", "Backend" => "Node/Express"];
 
 // print_r($cms + $customSite); // Array Union will provide unexpected result on non-key arrays.
 // var_dump($cms == $customSite); // array compare, or ===, returns boolean
 // var_dump($cms != $customSite); // returns boolean
 
+// ----------- The PHP switch Statement -------------- 
+function phpSwitch()
+{
+    $favLang = null;
+    if (!$favLang) return; // safe exit for execute other codes while not checking this code.
+    switch (strtolower($favLang)) {
+        case "js":
+            echo "Your favourite weapon is JavaScript";
+            break;
+        case "ts":
+            echo "Your favourite weapon is TypeScript";
+            break;
+        case "php":
+            echo "Your favourite weapon is PHP";
+        default:
+            echo "Favourite weapon is not on the list.";
+    }
+}
+phpSwitch();
 
+// ------ PHP Loops -------------
+$i = 0;
+while ($i < 10) {
+    $i++;
+    // echo "$i\n";
+}
+
+for ($x = 0; $x <= 100; $x += 10) {
+    // echo "The number is: $x\n";
+}
+
+$members = ["Peter" => "35", "Ben" => "37", "Joe" => "43"];
+foreach ($members as $person => $age) { // $members as $key => $value
+    // echo "$person is $age years old!\n";
+}
+
+$colors = array("red", "green", "blue", "yellow");
+
+foreach ($colors as $color):
+// echo "$color\n";
+endforeach;
+
+// -------- Functions ------
+
+function addFive(&$value)
+{ // with "&" sign, we're taking the memory address or reference
+    $value += 5; // here chaning the reference, not the $value itself.
+}
+$num = 2; // memory address : eg= 0x555
+addFive($num); // here the argument is not separate instance but this is memory address of $num
+// echo $num;
+
+// variadic function
+function IntSum(...$nums)
+{
+    $result = array_reduce($nums, function ($carry, $item) {
+        return (int) ($carry + $item);
+    }, 0);
+
+    return $result;
+}
+
+// echo IntSum(1.2, 2.3, 3.4, 4.5, 5.6);
