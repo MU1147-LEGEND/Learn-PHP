@@ -1,24 +1,20 @@
 <?php
 
-
-
-class NewClass
+class Person
 {
     // Properties
-    private $first = "Mohammad";
-    private $last = "Ullah";
-    private $age = "55";
-    protected $pet = "Goat";
+    public $name;
+    public $age;
+    public $pet;
 
-    // Methods
-    public function owner()
+    // methods
+    public function setName($userName)
     {
-        $fullName = $this->first . " " . $this->last;
-        return $fullName;
+        $this->name = $userName;
     }
 }
 
-class Pet extends NewClass
+class Pet extends Person
 {
     public function ownersPet()
     {
@@ -27,15 +23,26 @@ class Pet extends NewClass
 }
 
 
-class Person
+class PersonWithConstruct
 {
     // Properties
-    public $name;
-    public $age;
+    private $name; // privates are not directly accessible from outside of this class.
+    private $age;
 
     // methods
+    public function __construct($name, $age)
+    {
+        $this->name = $name;
+        $this->age = $age;
+    }
+
     public function setName($userName)
     {
         $this->name = $userName;
+    }
+
+    public function getName()
+    {
+        return $this->name;
     }
 }

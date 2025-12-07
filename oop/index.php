@@ -13,6 +13,7 @@ include 'includes/person.inc.php';
 
 <body style="background-color: #333; color:#bbb">
     <h1>PHP OOP</h1>
+
     <?php
     $person1 = new Person();
     $person1->setName("Mohammad Ullah");
@@ -22,7 +23,13 @@ include 'includes/person.inc.php';
     $person2->setName("Sabbir");
     echo "<p>$person2->name</p>";
 
+    // with constructor method
+    $person3 = new PersonWithConstruct("Mohammad", 555);
+    $person3->setName("Mohammad Ullah"); // here name is updated.
+    echo "<p>" . $person3->getName() . "</p>";
+
     ?>
+
 </body>
 
 </html>
