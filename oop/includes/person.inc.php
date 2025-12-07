@@ -2,7 +2,7 @@
 
 
 
-class Person
+class NewClass
 {
     // Properties
     private $first = "Mohammad";
@@ -10,7 +10,7 @@ class Person
     private $age = "55";
     protected $pet = "Goat";
 
-    // methods
+    // Methods
     public function owner()
     {
         $fullName = $this->first . " " . $this->last;
@@ -18,10 +18,24 @@ class Person
     }
 }
 
-class Pet extends Person
+class Pet extends NewClass
 {
     public function ownersPet()
     {
         return $this->pet;
+    }
+}
+
+
+class Person
+{
+    // Properties
+    public $name;
+    public $age;
+
+    // methods
+    public function setName($userName)
+    {
+        $this->name = $userName;
     }
 }

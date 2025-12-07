@@ -1,3 +1,7 @@
+<?php
+include 'includes/person.inc.php';
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -7,12 +11,17 @@
     <title>PHP OOP</title>
 </head>
 
-<body>
+<body style="background-color: #333; color:#bbb">
     <h1>PHP OOP</h1>
     <?php
-    require("includes/person.inc.php");
-    $pet = new Pet();
-    echo $pet->ownersPet() . " is " . $pet->owner() . "'s pet";
+    $person1 = new Person();
+    $person1->setName("Mohammad Ullah");
+    echo "<p>$person1->name</p>";
+
+    $person2 = new Person();
+    $person2->setName("Sabbir");
+    echo "<p>$person2->name</p>";
+
     ?>
 </body>
 
