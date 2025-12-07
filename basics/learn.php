@@ -206,3 +206,15 @@ function IntSum(...$nums)
 }
 
 // echo IntSum(1.2, 2.3, 3.4, 4.5, 5.6);
+
+
+// ---------- PHP ARRAY -----------
+array_push($colors, "Black"); // new item added
+// echo $colors[array_key_last($colors)]; // show new item
+
+array_splice($colors, -1, 1); // one item removed from last
+// var_dump($colors);
+
+$cars = array("brand" => "Ford", "model" => "Mustang", "year" => 1964);
+$newArray = array_diff($cars, ["Mustang", 1964]); // removes values and returns new array.
+var_dump($newArray);
