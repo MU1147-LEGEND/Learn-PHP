@@ -45,4 +45,9 @@ class PersonWithConstruct
     {
         return $this->name;
     }
+
+    public function __destruct()
+    {
+        echo "<br/>The class is unloading";
+    }
 }

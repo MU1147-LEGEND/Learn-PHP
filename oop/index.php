@@ -25,9 +25,9 @@ include 'includes/person.inc.php';
 
     // with constructor method
     $person3 = new PersonWithConstruct("Mohammad", 555);
-    $person3->setName("Mohammad Ullah"); // here name is updated.
     echo "<p>" . $person3->getName() . "</p>";
-
+    unset($person3);
+    // echo "<p>" . $person3->getName() . "</p>"; // here the object person3 is null. generate an error;
     ?>
 
 </body>
