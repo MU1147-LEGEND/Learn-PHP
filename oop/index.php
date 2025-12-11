@@ -1,5 +1,9 @@
 <?php
-include 'includes/person.inc.php';
+
+use Person\Person;
+use Person\PersonWithConstruct;
+
+include 'includes/autoLoader.inc.php';
 ?>
 
 <!DOCTYPE html>
@@ -28,6 +32,10 @@ include 'includes/person.inc.php';
     echo "<p>" . $person3->getName() . "</p>";
     unset($person3);
     // echo "<p>" . $person3->getName() . "</p>"; // here the object person3 is null. generate an error;
+
+    echo "<p>" . PersonWithConstruct::getNationality() . "</p>"; // accessing static variable
+    PersonWithConstruct::setNationality("Bengali"); // setting new static item
+    echo "<p>" . PersonWithConstruct::getNationality() . "</p>";
     ?>
 
 </body>

@@ -1,5 +1,7 @@
 <?php
 
+namespace Person;
+
 class Person
 {
     // Properties
@@ -29,6 +31,8 @@ class PersonWithConstruct
     private $name; // privates are not directly accessible from outside of this class.
     private $age;
 
+    public static $nationality = "Bangladeshi";
+
     // methods
     public function __construct($name, $age)
     {
@@ -49,5 +53,13 @@ class PersonWithConstruct
     public function __destruct()
     {
         echo "<br/>The class is unloading";
+    }
+
+    public static function setNationality ($newNationality){
+        self::$nationality = $newNationality;
+    }
+
+    public static function getNationality(){
+        return self::$nationality;
     }
 }
