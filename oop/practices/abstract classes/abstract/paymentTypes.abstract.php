@@ -9,7 +9,5 @@ abstract class Visa {
     public function visaPayment(){
         return "visa payment";
     }
-
     abstract public function getPayment(); // contract (method signatures)
 }
-
